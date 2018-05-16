@@ -15,28 +15,34 @@ export default new Vuex.Store({
     },
     mutations: {
         GET_TODO(state, todo) {
+            console.log('GET_TODO: ' + todo)
             state.newTodo = todo
         },
         ADD_TODO(state) {
+            console.log('ADD_TODO: ')
             state.todos.push({
                 body: state.newTodo,
                 completed: false
             })
         },
         EDIT_TODO(state, todo) {
+            console.log('EDIT_TODO: ' + todo)
             var todos = state.todos
             todos.splice(todos.indexOf(todo), 1)
             state.todos = todos
             state.newTodo = todo.body
         },
         REMOVE_TODO(state, todo) {
+            console.log('REMOVE_TODO: ' + todo)
             var todos = state.todos
             todos.splice(todos.indexOf(todo), 1)
         },
         COMPLETE_TODO(state, todo) {
+            console.log('COMPLETE_TODO: ' + todo)
             todo.completed = !todo.completed
         },
         CLEAR_TODO(state) {
+            console.log('CLEAR_TODO: ' + todo)
             state.newTodo = ''
         }
     },
