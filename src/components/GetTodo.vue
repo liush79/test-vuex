@@ -1,10 +1,12 @@
 <template>
-    <div id="get-todo" class="container">
+    <div id="get-todo" class="container input-group">
         <input class="form-control"
                :value="newTodo"
                @change="getTodo"
                placeholder="I need to...">
-        <button class="btn btn-primary" @click="addTodo">Add Todo</button>
+        <span class="input-group-btn">
+            <button class="btn btn-primary" @click="addTodo">Add Todo</button>
+        </span>
     </div>
 </template>
 <script>

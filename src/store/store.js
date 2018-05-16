@@ -43,21 +43,21 @@ export default new Vuex.Store({
     actions: {
         getTodo({commit}, todo){
             commit('GET_TODO', todo)
-          },
-          addTodo({commit}){
+        },
+        addTodo({commit}){
             commit('ADD_TODO')
-          },
-          editTodo({commit}, todo){
+        },
+        editTodo({commit}, todo){
             commit('EDIT_TODO', todo)
-          },
-          removeTodo({commit}, todo){
+        },
+        removeTodo({commit}, todo){
             commit('REMOVE_TODO', todo)
-          },
-          completeTodo({commit}, todo){
+        },
+        completeTodo({commit}, todo){
            commit('COMPLETE_TODO', todo)
-          },
-          clearTodo({commit}){
+        },
+        clearTodo({commit}){
             commit('CLEAR_TODO')
-          }       
+        }       
     }    
 })
