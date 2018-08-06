@@ -42,7 +42,7 @@ export default new Vuex.Store({
             todo.completed = !todo.completed
         },
         CLEAR_TODO(state) {
-            console.log('CLEAR_TODO: ' + todo)
+            console.log('CLEAR_TODO: ' + state)
             state.newTodo = ''
         }
     },

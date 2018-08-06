@@ -2,7 +2,7 @@
     <div id="current-todos" class="container">
         <h3 v-if="todos.length > 0">Current({{todos.length}})</h3>
         <ul class="list-group">
-            <li class="list-group-item" v-for="todo in todos">
+            <li class="list-group-item" v-for="todo in todos" key="todo.body">
                 {{todo.body}}
             <div class="btn-group">
                 <button type="button" @click="edit(todo)" class="btn btn-default btn-sm">
